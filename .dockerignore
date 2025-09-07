@@ -1,3 +1,4 @@
+
 # Dependencies
 node_modules
 npm-debug.log*
@@ -68,16 +69,13 @@ jspm_packages/
 .cache
 .parcel-cache
 
-# Next.js build output
-.next
-
 # Nuxt.js build / generate output
 .nuxt
 dist
 
-# Gatsby files
+# Gatsby files (but NOT the Next.js public directory)
 .cache/
-public
+# public  <- REMOVED THIS LINE
 
 # Storybook build outputs
 .out
