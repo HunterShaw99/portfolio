@@ -28,6 +28,19 @@ export default function Home() {
 
   const workExperience = [
     {
+      title: "Full Stack Developer",
+      company: "Personal Project - Portfolio Website (huntershaw.dev)",
+      period: "January 2024",
+      responsibilities: [
+        "Built a modern, responsive portfolio website using Next.js 15 and React 19, implementing server-side rendering for optimal performance and SEO",
+        "Designed an elegant dark theme interface with Tailwind CSS, featuring gradient text effects, smooth animations, and mobile-first responsive design",
+        "Implemented TypeScript for type safety and better developer experience, ensuring robust code quality and maintainability",
+        "Deployed the application using Digital Ocean App Platform with automated CI/CD pipeline, enabling seamless updates and reliable hosting",
+        "Utilized modern React features including hooks (useState, useEffect) for state management and client-side email decoding to prevent bot scraping",
+        "Integrated advanced CSS techniques including backdrop filters, custom animations, and CSS Grid for professional layout and visual appeal"
+      ]
+    },
+    {
       title: "Software Engineer",
       company: "Crown Castle",
       period: "July 2022 - Present",
@@ -138,25 +151,28 @@ export default function Home() {
       <section id="experience" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center gradient-text-accent">Experience</h2>
-          {workExperience.map((job, index) => (
-            <div key={index} className="card">
-              <div className="mb-8">
-                <h3 className="text-3xl font-bold text-white mb-3">{job.title}</h3>
-                <p className="text-xl text-gray-300 mb-2">{job.company}</p>
-                <p className="text-gray-500 font-medium">{job.period}</p>
+          <div className="space-y-8">
+            {workExperience.map((job, index) => (
+              <div key={index} className="card">
+                <div className="mb-8">
+                  <h3 className="text-3xl font-bold text-white mb-3">{job.title}</h3>
+                  <p className="text-xl text-gray-300 mb-2">{job.company}</p>
+                  <p className="text-gray-500 font-medium">{job.period}</p>
+                </div>
+                <div className="space-y-5">
+                  {job.responsibilities.map((responsibility, idx) => (
+                    <div key={idx} className="flex items-start text-gray-300 leading-relaxed">
+                      <span className="w-1.5 h-1.5 bg-gray-500 rounded-full mr-4 mt-2 flex-shrink-0"></span>
+                      <span>{responsibility}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="space-y-5">
-                {job.responsibilities.map((responsibility, idx) => (
-                  <div key={idx} className="flex items-start text-gray-300 leading-relaxed">
-                    <span className="w-1.5 h-1.5 bg-gray-500 rounded-full mr-4 mt-2 flex-shrink-0"></span>
-                    <span>{responsibility}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
+
 
       <div className="section-divider"></div>
 
