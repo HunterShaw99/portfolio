@@ -28,9 +28,10 @@ export default function Home() {
 
   const workExperience = [
     {
-      title: "Full Stack Developer",
-      company: "Personal Project - Portfolio Website (huntershaw.dev)",
-      period: "January 2024",
+      title: "Frontend Developer",
+      company: "Personal Project - Portfolio Website",
+      period: "January 2025",
+      summary: "Designed and developed a modern, responsive portfolio website showcasing professional experience and technical expertise using Next.js and contemporary web technologies, and the ability to create polished, production-ready applications.",
       responsibilities: [
         "Built a modern, responsive portfolio website using Next.js 15 and React 19, implementing server-side rendering for optimal performance and SEO",
         "Designed an elegant dark theme interface with Tailwind CSS, featuring gradient text effects, smooth animations, and mobile-first responsive design",
@@ -44,6 +45,7 @@ export default function Home() {
       title: "Software Engineer",
       company: "Crown Castle",
       period: "July 2022 - Present",
+      summary: "Leveraging full-stack development tools to create scalable web applications and GIS solutions that drive business value and operational efficiency.",
       responsibilities: [
         "Develops full-stack web applications using JavaScript, React, and Express, enabling real-time data analysis to optimize infrastructure usage and generate additional revenue from existing assets",
         "Creates and maintains GIS web apps that provide critical insights into geographic and asset-related data, helping the company make data-driven decisions and boost operational efficiency",
@@ -53,6 +55,7 @@ export default function Home() {
       ]
     }
   ];
+
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -151,13 +154,16 @@ export default function Home() {
       <section id="experience" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center gradient-text-accent">Experience</h2>
-          <div className="space-y-8">
+          <div className="space-y-12">
             {workExperience.map((job, index) => (
               <div key={index} className="card">
                 <div className="mb-8">
                   <h3 className="text-3xl font-bold text-white mb-3">{job.title}</h3>
                   <p className="text-xl text-gray-300 mb-2">{job.company}</p>
-                  <p className="text-gray-500 font-medium">{job.period}</p>
+                  <p className="text-gray-500 font-medium mb-4">{job.period}</p>
+                  {job.summary && (
+                    <p className="text-lg text-gray-400 italic leading-relaxed">{job.summary}</p>
+                  )}
                 </div>
                 <div className="space-y-5">
                   {job.responsibilities.map((responsibility, idx) => (
@@ -172,6 +178,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
 
 
       <div className="section-divider"></div>
