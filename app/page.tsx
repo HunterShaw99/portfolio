@@ -1,9 +1,27 @@
+"use client";
 
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [email, setEmail] = useState<string>('');
+
+  useEffect(() => {
+    // Decode the email on the client side to prevent bot scraping
+    const encoded = 'aHVudGVyc2hhdzBAZ21haWwuY29t'; // Base64 encoded email
+    const decoded = atob(encoded);
+    setEmail(decoded);
+  }, []);
+
+  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (email) {
+      window.location.href = `mailto:${email}`;
+    }
+  };
+
   const skills = [
-    "JavaScript", "React", "Express", "Python", "REST APIs", 
+    "JavaScript", "React", "Express", "Python", "REST APIs",
     "ADO/Jira", "Git", "FastAPI", "GIS Web Apps", "AWS (EC2, S3, RDS)",
     "PostgreSQL/RDBS", "PL/SQL", "Linux/Unix", "Containerization"
   ];
@@ -161,7 +179,7 @@ export default function Home() {
             </div>
             <div className="card text-center">
               <h3 className="text-xl font-semibold mb-4 text-white">Backend</h3>
-              <p className="text-gray-400 leading-relaxed">Express, FastAPI, Python, REST APIs, PL/SQL, Database Design</p>
+              <p className="text-gray-400 leading-relaxed">Express, FastAPI, Python, Next.JS, REST APIs, PL/SQL, Database Design</p>
             </div>
             <div className="card text-center">
               <h3 className="text-xl font-semibold mb-4 text-white">Cloud & DevOps</h3>
@@ -182,12 +200,15 @@ export default function Home() {
           </p>
           <div className="flex justify-center gap-6 max-w-2xl mx-auto">
             <a
-              href="mailto:huntershaw0@gmail.com"
+              href="#"
+              onClick={handleEmailClick}
               className="card text-center group flex-1 max-w-xs"
             >
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📧</div>
               <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <p className="text-gray-400 group-hover:text-gray-300 transition-colors">huntershaw0@gmail.com</p>
+              <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                {email || 'Click to reveal email'}
+              </p>
             </a>
             <a
               href="https://www.linkedin.com/in/huntermshaw/"
@@ -202,7 +223,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-white/10">

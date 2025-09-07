@@ -6,7 +6,13 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "docker:build": "docker build -t portfolio .",
+    "docker:run": "docker run -p 3000:3000 portfolio",
+    "docker:build-run": "npm run docker:build && npm run docker:run",
+    "podman:build": "podman build -t portfolio .",
+    "podman:run": "podman run -p 3000:3000 portfolio",
+    "podman:build-run": "npm run podman:build && npm run podman:run"
   },
   "dependencies": {
     "react": "19.1.0",
