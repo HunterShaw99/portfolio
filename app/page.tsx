@@ -30,7 +30,7 @@ export default function Home() {
     {
       title: "Frontend Developer",
       company: "Personal Project - Portfolio Website",
-      period: "January 2025",
+      period: "January 2024 - Present",
       summary: "Designed and developed a modern, responsive portfolio website showcasing professional experience and technical expertise using Next.js and contemporary web technologies, and the ability to create polished, production-ready applications.",
       responsibilities: [
         "Built a modern, responsive portfolio website using Next.js 15 and React 19, implementing server-side rendering for optimal performance and SEO",
