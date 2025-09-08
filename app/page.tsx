@@ -28,7 +28,7 @@ export default function Home() {
 
   const workExperience = [
     {
-      title: "Frontend Developer",
+      title: "Fullstack Developer",
       company: "Personal Project - Portfolio Website",
       period: "August 2025 - Present",
       summary: "Designed and developed a modern, responsive portfolio website showcasing professional experience and technical expertise using Next.js and contemporary web technologies, and the ability to create polished, production-ready applications.",
