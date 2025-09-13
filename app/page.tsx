@@ -229,7 +229,7 @@ export default function Home() {
             >
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📧</div>
               <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
+              <p className="text-gray-400 group-hover:text-gray-300 transition-colors justify-center items-center px-1">
                 {email || 'Click to reveal email'}
               </p>
             </a>
@@ -241,7 +241,7 @@ export default function Home() {
             >
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">💼</div>
               <h3 className="text-lg font-semibold text-white mb-2">LinkedIn</h3>
-              <p className="text-gray-400 group-hover:text-gray-300 transition-colors">Connect with me</p>
+              <p className="text-gray-400 group-hover:text-gray-300 transition-colors justify-center items-center px-1">Connect with me</p>
             </a>
           </div>
         </div>
