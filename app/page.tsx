@@ -225,7 +225,7 @@ export default function Home() {
             <a
               href="#"
               onClick={handleEmailClick}
-              className="card text-center group flex-1 max-w-xs mx-auto"
+              className="card text-center group w-full sm:flex-1 sm:max-w-xs mx-auto h-36 flex flex-col justify-center"
             >
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📧</div>
               <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
@@ -237,7 +237,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/huntermshaw/"
               target="_blank"
               rel="noopener noreferrer"
-              className="card text-center group flex-1 max-w-xs mx-auto"
+              className="card text-center group w-full sm:flex-1 sm:max-w-xs mx-auto h-36 flex flex-col justify-center"
             >
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">💼</div>
               <h3 className="text-lg font-semibold text-white mb-2">LinkedIn</h3>
