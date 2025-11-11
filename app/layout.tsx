@@ -54,26 +54,33 @@ export const metadata: Metadata = {
     description: "Full-stack software engineer specializing in React, JavaScript, and AWS. Experienced in developing GIS web applications and scalable solutions.",
     siteName: "Hunter M. Shaw Portfolio",
     url: "https://huntershaw.dev",
+    images: [
+      {
+        url: "https://huntershaw.dev/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hunter M. Shaw - Software Engineer Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hunter M. Shaw - Software Engineer",
+    description: "Full-stack software engineer specializing in React, JavaScript, and AWS. Experienced in developing GIS web applications and scalable solutions.",
+    images: ["https://huntershaw.dev/og-image.jpg"],
   },
   alternates: {
     canonical: "https://huntershaw.dev",
   },
   category: "technology",
   classification: "Software Engineering Portfolio",
+  verification: {
+    google: "your-google-site-verification-code", // Replace with your actual verification code
+  },
+  other: {
+    'theme-color': '#000000',
+  },
 };
-
-// verification: {
-//     google: "your-google-site-verification-code", // Replace with your actual verification code
-//     // yandex: "your-yandex-verification-code", // Uncomment and add if needed
-//     // yahoo: "your-yahoo-verification-code", // Uncomment and add if needed
-//   },
-// twitter: {
-//     card: "summary_large_image",
-//     title: "Hunter M. Shaw - Software Engineer",
-//     description: "Full-stack software engineer specializing in React, JavaScript, and AWS. Experienced in developing GIS web applications and scalable solutions.",
-//     creator: "@huntershaw", // Replace with your actual Twitter handle if you have one
-//   },
-
 
 export default function RootLayout({
   children,
@@ -82,6 +89,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-gray-100`}
       >

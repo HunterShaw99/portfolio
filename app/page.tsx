@@ -28,17 +28,16 @@ export default function Home() {
 
   const workExperience = [
     {
-      title: "Fullstack Developer",
+      title: "Software Engineer",
       company: "Personal Project - Portfolio Website",
       period: "August 2025 - Present",
       summary: "Designed and developed a modern, responsive portfolio website showcasing professional experience and technical expertise using Next.js and contemporary web technologies, and the ability to create polished, production-ready applications.",
       responsibilities: [
-        "Built a modern, responsive portfolio website using Next.js 15 and React 19, implementing server-side rendering for optimal performance and SEO",
-        "Designed an elegant dark theme interface with Tailwind CSS, featuring gradient text effects, smooth animations, and mobile-first responsive design",
-        "Implemented TypeScript for type safety and better developer experience, ensuring robust code quality and maintainability",
-        "Deployed the application using Digital Ocean App Platform with automated CI/CD pipeline, enabling seamless updates and reliable hosting",
-        "Utilized modern React features including hooks (useState, useEffect) for state management and client-side email decoding to prevent bot scraping",
-        "Integrated advanced CSS techniques including backdrop filters, custom animations, and CSS Grid for professional layout and visual appeal"
+        "Implemented advanced CSS techniques including conic gradients, backdrop filters, and complex animations to enhance the user interface and overall web design",
+        "Created a secure email contact system using Base64 encoding to prevent bot scraping, demonstrating proficiency in security best practices within JavaScript development",
+        "Achieved optimal performance through Next.js optimization features and proper image handling, showcasing expertise in building high-performance web applications with Next.js",
+        "Established a comprehensive Docker workflow supporting both Docker and Podman environments for efficient application packaging and deployment using containerization technologies",
+        "Built responsive web design adapting seamlessly across mobile, tablet, and desktop devices, ensuring accessibility and optimal user experience"
       ]
     },
     {
@@ -47,11 +46,11 @@ export default function Home() {
       period: "July 2022 - Present",
       summary: "Leveraging full-stack development tools to create scalable web applications and GIS solutions that drive business value and operational efficiency.",
       responsibilities: [
-        "Develops full-stack web applications using JavaScript, React, and Express, enabling real-time data analysis to optimize infrastructure usage and generate additional revenue from existing assets",
-        "Creates and maintains GIS web apps that provide critical insights into geographic and asset-related data, helping the company make data-driven decisions and boost operational efficiency",
-        "Designs customized sales pipeline applications that streamline operations and improve lead tracking, increasing sales volume while minimizing reliance on external vendor solutions",
-        "Deploys scalable applications and databases on AWS, tailoring solutions to meet customer requirements, enhancing performance, and driving client engagement",
-        "Utilizes agile methodologies to rapidly deliver and iterate on web applications, ensuring continuous alignment with business goals and stakeholder needs"
+        "Develops full-stack web applications using JavaScript, React, Python, and Next.js, enabling real-time data analysis to optimize infrastructure usage and generate additional revenue from existing assets. Leveraged REST APIs for seamless data integration",
+        "Creates and maintains GIS Web Apps that provide critical insights into geographic and asset-related data, helping the company make data-driven decisions and boost operational efficiency. Utilized Python scripting to automate data processing within these applications",
+        "Designs customized sales pipeline applications using JavaScript and React that streamline operations and improve lead tracking, increasing sales volume while minimizing reliance on external vendor solutions. Implemented features with a focus on feature ownership",
+        "Deploys scalable applications and databases on AWS (EC2, S3, RDS), tailoring solutions to meet customer requirements, enhancing performance, and driving client engagement. Implemented CD/CI pipelines for automated deployments",
+        "Utilizes agile methodologies to rapidly deliver and iterate on web applications, ensuring continuous alignment with business goals and stakeholder needs. Demonstrated strong thought leadership in advocating for best practices within the team"
       ]
     }
   ];
