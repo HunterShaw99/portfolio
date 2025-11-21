@@ -1,26 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import { useState, useEffect } from "react";
 import ContactModal from "@/app/components/ContactModal";
 import {BriefcaseIcon} from '@heroicons/react/24/solid';
 
 export default function Home() {
-  const [email, setEmail] = useState<string>('');
-
-  useEffect(() => {
-    // Decode the email on the client side to prevent bot scraping
-    const encoded = 'aHVudGVyc2hhdzBAZ21haWwuY29t'; // Base64 encoded email
-    const decoded = atob(encoded);
-    setEmail(decoded);
-  }, []);
-
-  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    if (email) {
-      window.location.href = `mailto:${email}`;
-    }
-  };
 
   const skills = [
     "JavaScript", "React", "Express", "Python", "REST APIs",

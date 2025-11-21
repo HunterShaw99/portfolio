@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next"; // 1. Import Viewport
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import {PostHogProvider} from "@/app/providers";
+import { PostHogProvider } from "@/app/providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,9 +13,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#000000",
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://huntershaw.dev"),
   title: "Hunter M. Shaw - Software Engineer",
-  description: "Full-stack software engineer specializing in React, JavaScript, and AWS. Experienced in developing GIS web applications and scalable solutions.",
+  description: "Full-stack software engineer specializing in React, JavaScript, and AWS.",
   keywords: [
     "Hunter M. Shaw",
     "Hunter Shaw",
@@ -37,6 +44,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Hunter M. Shaw" }],
   creator: "Hunter M. Shaw",
   publisher: "Hunter M. Shaw",
+
+  icons: {
+    icon: "/favicon.ico",
+  },
+
   robots: {
     index: true,
     follow: true,
@@ -52,12 +64,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     title: "Hunter M. Shaw - Software Engineer",
-    description: "Full-stack software engineer specializing in React, JavaScript, and AWS. Experienced in developing GIS web applications and scalable solutions.",
+    description: "Full-stack software engineer specializing in React, JavaScript, and AWS.",
     siteName: "Hunter M. Shaw Portfolio",
-    url: "https://huntershaw.dev",
+    url: "/",
     images: [
       {
-        url: "https://huntershaw.dev/og-image.jpg",
+        url: "/hunter-shaw-software-engineer.png",
         width: 1200,
         height: 630,
         alt: "Hunter M. Shaw - Software Engineer Portfolio",
@@ -67,19 +79,16 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hunter M. Shaw - Software Engineer",
-    description: "Full-stack software engineer specializing in React, JavaScript, and AWS. Experienced in developing GIS web applications and scalable solutions.",
-    images: ["https://huntershaw.dev/og-image.jpg"],
+    description: "Full-stack software engineer specializing in React, JavaScript, and AWS.",
+    images: ["/hunter-shaw-software-engineer.png"],
   },
   alternates: {
-    canonical: "https://huntershaw.dev",
+    canonical: "/",
   },
   category: "technology",
   classification: "Software Engineering Portfolio",
   verification: {
-    google: "your-google-site-verification-code", // Replace with your actual verification code
-  },
-  other: {
-    'theme-color': '#000000',
+    google: "your-google-site-verification-code",
   },
 };
 
@@ -88,17 +97,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Hunter M. Shaw",
+    "url": "https://huntershaw.dev",
+    "jobTitle": "Software Engineer",
+    "image": "https://huntershaw.dev/hunter-shaw-software-engineer.png",
+    "sameAs": [
+      "https://www.linkedin.com/in/huntermshaw/",
+      "https://github.com/HunterShaw99",
+    ],
+    "knowsAbout": ["React", "JavaScript", "AWS", "GIS", "Software Engineering", 'Next.js', 'Node.js', 'TypeScript'],
+  };
+
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-gray-100`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <PostHogProvider>
           {children}
         </PostHogProvider>
