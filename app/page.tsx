@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import ContactModal from "@/app/components/ContactModal";
+import {BriefcaseIcon} from '@heroicons/react/24/solid';
 
 export default function Home() {
   const [email, setEmail] = useState<string>('');
@@ -221,24 +223,14 @@ export default function Home() {
             I&#39;m always interested in discussing new opportunities and exciting projects.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 max-w-2xl mx-auto px-4 sm:px-0">
-            <a
-              href="#"
-              onClick={handleEmailClick}
-              className="card text-center group w-full sm:flex-1 sm:max-w-xs mx-auto h-36 flex flex-col justify-center"
-            >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📧</div>
-              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <p className="text-gray-400 group-hover:text-gray-300 transition-colors text-center break-all px-2">
-                {email || 'Click to reveal email'}
-              </p>
-            </a>
+            <ContactModal />
             <a
               href="https://www.linkedin.com/in/huntermshaw/"
               target="_blank"
               rel="noopener noreferrer"
-              className="card text-center group w-full sm:flex-1 sm:max-w-xs mx-auto h-36 flex flex-col justify-center"
+              className="card text-center group w-full sm:flex-1 sm:max-w-xs mx-auto h-36 flex flex-col items-center justify-center"
             >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">💼</div>
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform "><BriefcaseIcon className={'w-10 h-10 items-center justify-center'}/></div>
               <h3 className="text-lg font-semibold text-white mb-2">LinkedIn</h3>
               <p className="text-gray-400 group-hover:text-gray-300 transition-colors text-center px-2">Connect with me</p>
             </a>
