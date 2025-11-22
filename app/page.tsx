@@ -8,7 +8,8 @@ export default function Home() {
   const skills = [
     "JavaScript", "React", "Express", "Python", "REST APIs",
     "ADO/Jira", "Git", "FastAPI", "GIS Web Apps", "AWS (EC2, S3, RDS)",
-    "PostgreSQL/RDBS", "PL/SQL", "Linux/Unix", "Containerization"
+    "PostgreSQL/RDBS", "PL/SQL", "Linux/Unix", "Containerization", "AWS Databricks",
+    "Digital Ocean", "Next.js", "Tailwinds CSS", "Image Analysis", "AWS Rekognition"
   ];
 
   const workExperience = [
@@ -35,7 +36,8 @@ export default function Home() {
         "Creates and maintains GIS Web Apps that provide critical insights into geographic and asset-related data, helping the company make data-driven decisions and boost operational efficiency. Utilized Python scripting to automate data processing within these applications",
         "Designs customized sales pipeline applications using JavaScript and React that streamline operations and improve lead tracking, increasing sales volume while minimizing reliance on external vendor solutions. Implemented features with a focus on feature ownership",
         "Deploys scalable applications and databases on AWS (EC2, S3, RDS), tailoring solutions to meet customer requirements, enhancing performance, and driving client engagement. Implemented CD/CI pipelines for automated deployments",
-        "Utilizes agile methodologies to rapidly deliver and iterate on web applications, ensuring continuous alignment with business goals and stakeholder needs. Demonstrated strong thought leadership in advocating for best practices within the team"
+        "Utilizes agile methodologies to rapidly deliver and iterate on web applications, ensuring continuous alignment with business goals and stakeholder needs. Demonstrated strong thought leadership in advocating for best practices within the team",
+        "Leverages AWS Rekognition for image analysis for wireless telecommunication towers, within a full-stack web app built on Next.js and AWS cloud infrastructure",
       ]
     }
   ];
