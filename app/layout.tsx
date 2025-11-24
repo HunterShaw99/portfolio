@@ -1,17 +1,5 @@
 import type {Metadata, Viewport} from "next"; // 1. Import Viewport
-import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
-import {PostHogProvider} from "@/app/providers";
-
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
 
 export const viewport: Viewport = {
     width: "device-width",
@@ -22,7 +10,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
     metadataBase: new URL("https://huntershaw.dev"),
     title: "Hunter M. Shaw - Software Engineer",
-    description: "Full-stack software engineer specializing in React, JavaScript, and AWS.",
+    description: "Hunter Shaw. Full-Stack Engineer specializing in React/Next.js/Python. I build scalable systems for telecommunication systems.",
     keywords: [
         "Hunter M. Shaw",
         "Hunter Shaw",
@@ -126,7 +114,7 @@ export const metadata: Metadata = {
         type: "website",
         locale: "en_US",
         title: "Hunter M. Shaw - Software Engineer",
-        description: "Full-stack software engineer specializing in React, JavaScript, and AWS.",
+        description: "Hunter Shaw. Full-Stack Engineer specializing in React/Next.js/Python. I build scalable systems for telecommunication systems.",
         siteName: "Hunter M. Shaw Portfolio",
         url: "/",
         images: [
@@ -141,7 +129,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Hunter M. Shaw - Software Engineer",
-        description: "Full-stack software engineer specializing in React, JavaScript, and AWS.",
+        description: "Hunter Shaw. Full-Stack Engineer specializing in React/Next.js/Python. I build scalable systems for telecommunication systems.",
         images: ["/hunter-shaw-software-engineer.png"],
     },
     alternates: {
@@ -176,15 +164,13 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-gray-100 selection:bg-emerald-700 selection:text-white`}
+            className={`antialiased bg-gray-900 text-gray-100 selection:bg-emerald-700 selection:text-white`}
         >
         <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
         />
-        <PostHogProvider>
-            {children}
-        </PostHogProvider>
+        {children}
         </body>
         </html>
     );
