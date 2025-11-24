@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-console.log("Building with PostHog Key:", process.env.NEXT_PUBLIC_POSTHOG_KEY);
 const nextConfig: NextConfig = {
   output: 'standalone',
   compress: true,
