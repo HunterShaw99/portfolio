@@ -166,7 +166,7 @@ export default function RootLayout({
         <body
             className={`antialiased bg-gray-900 text-gray-100 selection:bg-emerald-700 selection:text-white`}
         >
-        <script
+        <script suppressHydrationWarning
             type="application/ld+json"
             dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
         />
