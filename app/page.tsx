@@ -29,15 +29,16 @@ export default function Home() {
         {
             title: "Software Engineer",
             company: "Crown Castle",
-            period: "July 2022 - Present",
+            period: "July 2022 - February 2026",
             summary: "Leveraging full-stack development tools to create scalable web applications and GIS solutions that drive business value and operational efficiency.",
             responsibilities: [
-                "Develops full-stack web applications using JavaScript, React, Python, and Next.js, enabling real-time data analysis to optimize infrastructure usage and generate additional revenue from existing assets. Leveraged REST APIs for seamless data integration",
-                "Creates and maintains GIS Web Apps that provide critical insights into geographic and asset-related data, helping the company make data-driven decisions and boost operational efficiency. Utilized Python scripting to automate data processing within these applications",
-                "Designs customized sales pipeline applications using JavaScript and React that streamline operations and improve lead tracking, increasing sales volume while minimizing reliance on external vendor solutions. Implemented features with a focus on feature ownership",
-                "Deploys scalable applications and databases on AWS (EC2, S3, RDS), tailoring solutions to meet customer requirements, enhancing performance, and driving client engagement. Implemented CD/CI pipelines for automated deployments",
-                "Utilizes agile methodologies to rapidly deliver and iterate on web applications, ensuring continuous alignment with business goals and stakeholder needs. Demonstrated strong thought leadership in advocating for best practices within the team",
-                "Leverages AWS Rekognition for image analysis for wireless telecommunication towers, within a full-stack web app built on Next.js and AWS cloud infrastructure",
+                "Developed full-stack web applications using JavaScript, React, Python, and Next.js, enabling real-time data analysis to optimize infrastructure usage and generate additional revenue from existing assets. Leveraged REST APIs for seamless data integration",
+                "Created and maintained GIS Web Apps that provide critical insights into geographic and asset-related data, helping the company make data-driven decisions and boost operational efficiency. Utilized Python scripting to automate data processing within these applications",
+                "Designed customized sales pipeline applications using JavaScript and React that streamline operations and improve lead tracking, increasing sales volume while minimizing reliance on external vendor solutions. Implemented features with a focus on feature ownership",
+                "Deployed scalable applications and databases on AWS (EC2, S3, RDS), tailoring solutions to meet customer requirements, enhancing performance, and driving client engagement. Implemented CD/CI pipelines for automated deployments",
+                "Utilized agile methodologies to rapidly deliver and iterate on web applications, ensuring continuous alignment with business goals and stakeholder needs. Demonstrated strong thought leadership in advocating for best practices within the team",
+                "Leveraged AWS Rekognition for image analysis for wireless telecommunication towers, within a full-stack web app built on Next.js and AWS cloud infrastructure",
+                "Enhanced user experience and informed product strategy by monitoring frontend health via Datadog RUM, identifying high-traffic features and heavy user-interaction points; utilized these analytics to orient development priorities toward high-impact areas, ensuring technical roadmaps were aligned with actual user behavior and usage patterns."
             ]
         }
     ];
@@ -241,7 +242,7 @@ export default function Home() {
             <footer className="py-12 px-6 border-t border-white/10">
                 <div className="max-w-6xl mx-auto text-center">
                     <p className="text-gray-500">
-                        © 2025 Hunter M. Shaw. Built with Next.js and Tailwind CSS.
+                        © 2026 Hunter M. Shaw. Built with Next.js and Tailwind CSS.
                     </p>
                 </div>
             </footer>
