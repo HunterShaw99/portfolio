@@ -12,7 +12,15 @@
     "docker:build-run": "npm run docker:build && npm run docker:run",
     "podman:build": "podman build -t portfolio .",
     "podman:run": "podman run -p 3000:3000 portfolio",
-    "podman:build-run": "npm run podman:build && npm run podman:run"
+    "podman:build-run": "npm run podman:build && npm run podman:run",
+    "monitoring:start": "podman-compose up -d --build",
+    "monitoring:stop": "podman-compose down",
+    "monitoring:logs": "podman-compose logs -f",
+    "monitoring:docker": "docker-compose up -d --build",
+    "monitoring:setup": "./setup-monitoring.sh",
+    "monitoring:full-setup": "npm run monitoring:setup && npm run monitoring:start",
+    "monitoring:auth-setup": "./setup-prometheus-auth.sh",
+    "monitoring:secure-setup": "npm run monitoring:setup && npm run monitoring:auth-setup && npm run monitoring:start"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",

@@ -1,0 +1,22 @@
+# Prometheus web configuration for basic authentication
+# This file configures HTTP basic authentication for Prometheus UI and API
+
+# Basic authentication configuration
+basic_auth_users:
+  # Default admin user (CHANGE THIS IN PRODUCTION!)
+  admin: $2y$12$somehashedpasswordplaceholderexample123
+  # Add more users as needed
+  # user2: $2y$12$anotherhashedpasswordexample456
+
+# TLS configuration (recommended for production)
+# tls_server_config:
+#   cert_file: server.crt
+#   key_file: server.key
+
+# HTTP server configuration
+http_server_config:
+  # Enable HTTP/2
+  http2: true
+  
+  # Enable compression
+  enable_compression: true

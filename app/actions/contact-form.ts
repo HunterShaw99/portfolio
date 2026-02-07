@@ -13,6 +13,7 @@ import {
   type InferInput
 } from 'valibot';
 import nodemailer from 'nodemailer';
+import { updateResponseStatus } from '../middleware';
 
 // Refactored Schema using Valibot
 const contactFormSchema = object({
@@ -124,6 +125,9 @@ ${sanitizedComments}
       replyTo: sanitizedEmail,
     });
 
+    // Track successful form submission
+    updateResponseStatus(200);
+    
     return {
       success: true,
       message: 'Thank you for contacting us! We\'ll get back to you soon.',
@@ -145,6 +149,9 @@ ${sanitizedComments}
     }
 
     console.error('Contact form submission error:', error);
+
+    // Track error in metrics
+    updateResponseStatus(500);
 
     // Check if it's a transporter configuration error
     if (error instanceof Error && error.message.includes('Missing required environment variables')) {

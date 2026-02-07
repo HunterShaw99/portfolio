@@ -1,0 +1,18 @@
+# Example password file for Prometheus authentication
+# This shows the format: username:bcrypt-hashed-password
+# You can generate bcrypt hashes using: htpasswd -B -n username
+
+# Example admin user (for testing only - CHANGE IN PRODUCTION!)
+# admin:$2y$12$somehashedpasswordplaceholderexample123
+
+# To generate a real password hash:
+# htpasswd -B -n admin
+
+# Example output would look like:
+# admin:$2y$12$N9qo8uLOickgx2ZMRZoMy.5J5Z2D5O5J5Z2D5O5J5Z2D5O5J5Z2D5
+
+# Security Note:
+# - Always use strong, unique passwords
+# - Never commit real password files to version control
+# - Use environment variables or secret management in production
+# - Consider using TLS/HTTPS with authentication

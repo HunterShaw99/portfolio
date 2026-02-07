@@ -1,0 +1,95 @@
+version: '3.8'
+
+services:
+  # Next.js Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - HOSTNAME=0.0.0.0
+    restart: unless-stopped
+    networks:
+      - monitoring-network
+    # Podman-specific security enhancements
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_BIND_SERVICE
+    read_only: true
+    tmpfs:
+      - /tmp:size=100M,mode=1777
+
+  # Prometheus Server
+  prometheus:
+    image: prom/prometheus:latest  # Official Prometheus image
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:Z
+      - prometheus_data:/prometheus:Z
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.enable-lifecycle'  # Allow reloads for Podman
+    restart: unless-stopped
+    networks:
+      - monitoring-network
+    depends_on:
+      - app
+    # Podman security settings
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_BIND_SERVICE
+    # Note: We cannot use read_only:true with Prometheus because it needs to write
+    # to its data directory. Instead, we use a more targeted approach.
+    tmpfs:
+      - /tmp:size=50M,mode=1777
+    # Run as root to avoid permission issues with volume mounts
+    # This is necessary for rootless Podman with volume permissions
+    user: root
+
+# Grafana for visualization (optional, can be added later)
+  # grafana:
+  #   image: grafana/grafana:latest
+  #   ports:
+  #     - "3001:3000"
+  #   volumes:
+  #     - grafana_data:/var/lib/grafana:Z
+  #   restart: unless-stopped
+  #   networks:
+  #     - monitoring-network
+  #   security_opt:
+  #     - no-new-privileges:true
+  #   cap_drop:
+  #     - ALL
+  #   cap_add:
+  #     - NET_BIND_SERVICE
+
+# Networks for container communication
+networks:
+  monitoring-network:
+    driver: bridge
+    # Podman-specific network configuration
+    enable_ipv6: false
+
+# Volumes for persistent data
+volumes:
+  prometheus_data:
+    # Simplified volume configuration that works with both Docker and Podman
+    driver: local
+    # Remove the bind mount configuration to use Podman's default volume management
+  # grafana_data:
+  #   driver: local

@@ -1,0 +1,33 @@
+# Prometheus configuration
+# This file configures Prometheus to scrape metrics from our Next.js application
+
+# Global configuration
+global:
+  scrape_interval: 15s  # How frequently to scrape targets
+  evaluation_interval: 15s  # How frequently to evaluate rules
+  scrape_timeout: 10s  # Timeout for scrape requests
+
+# Rule files specifies additional alerting and recording rules
+rule_files:
+  # - "alert.rules"
+  # - "recording.rules"
+
+# Alerting configuration
+# alerting:
+#   alertmanagers:
+#     - static_configs:
+#         - targets: []
+
+# Scrape configuration - defines what to monitor
+scrape_configs:
+  # Monitor Prometheus itself
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Monitor our Next.js application
+  - job_name: 'nextjs-app'
+    metrics_path: '/api/metrics'
+    static_configs:
+      - targets: ['app:3000']  # 'app' is the service name in docker-compose
+    scrape_interval: 10s  # More frequent scraping for our main app
