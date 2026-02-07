@@ -345,8 +345,8 @@ export default function Home() {
                                 <Image
                                     src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg"
                                     alt="DigitalOcean Referral Badge"
-                                    width={96}
-                                    height={84}
+                                    width={136}
+                                    height={124}
                                 />
                             </a>
                         </div>
