@@ -227,7 +227,7 @@ export default function Home() {
                       key={idx}
                       className="flex items-start text-gray-300 leading-relaxed"
                     >
-                      <span className="w-1.5 h-1.5 bg-gray-500 rounded-full mr-4 mt-2 flex-shrink-0"></span>
+                      <span className="w-1.5 h-1.5 bg-gray-500 rounded-full mr-4 mt-2 shrink-0"></span>
                       <span>{responsibility}</span>
                     </div>
                   ))}
