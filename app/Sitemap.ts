@@ -1,12 +1,12 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://huntershaw.dev',
+      url: "https://huntershaw.dev",
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 1,
     },
-  ]
+  ];
 }
