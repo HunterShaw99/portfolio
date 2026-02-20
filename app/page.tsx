@@ -135,7 +135,7 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center gradient-text-accent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center gradient-text-accent leading-tight">
             About Me
           </h2>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -203,7 +203,7 @@ export default function Home() {
       {/* Experience Section */}
       <section id="experience" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center gradient-text-accent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center gradient-text-accent leading-tight">
             Experience
           </h2>
           <div className="space-y-12">
@@ -243,7 +243,7 @@ export default function Home() {
       {/* Skills Section */}
       <section id="skills" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center gradient-text-accent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center gradient-text-accent leading-tight">
             Skills & Technologies
           </h2>
           <div className="flex flex-wrap gap-3 justify-center mb-20">
@@ -289,7 +289,7 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 gradient-text-accent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 gradient-text-accent leading-tight">
             Let&#39;s Connect
           </h2>
           <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
