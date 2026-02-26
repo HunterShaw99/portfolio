@@ -51,13 +51,12 @@ export default function Home() {
       summary:
         "Leveraging full-stack development tools to create scalable web applications and GIS solutions that drive business value and operational efficiency.",
       responsibilities: [
-        "Developed full-stack web applications using JavaScript, React, Python, and Next.js, enabling real-time data analysis to optimize infrastructure usage and generate additional revenue from existing assets. Leveraged REST APIs for seamless data integration",
-        "Created and maintained GIS Web Apps that provide critical insights into geographic and asset-related data, helping the company make data-driven decisions and boost operational efficiency. Utilized Python scripting to automate data processing within these applications",
-        "Designed customized sales pipeline applications using JavaScript and React that streamline operations and improve lead tracking, increasing sales volume while minimizing reliance on external vendor solutions. Implemented features with a focus on feature ownership",
-        "Deployed scalable applications and databases on AWS (EC2, S3, RDS), tailoring solutions to meet customer requirements, enhancing performance, and driving client engagement. Implemented CD/CI pipelines for automated deployments",
-        "Utilized agile methodologies to rapidly deliver and iterate on web applications, ensuring continuous alignment with business goals and stakeholder needs. Demonstrated strong thought leadership in advocating for best practices within the team",
-        "Leveraged AWS Rekognition for image analysis for wireless telecommunication towers, within a full-stack web app built on Next.js and AWS cloud infrastructure",
-        "Enhanced user experience and informed product strategy by monitoring frontend health via Datadog RUM, identifying high-traffic features and heavy user-interaction points; utilized these analytics to orient development priorities toward high-impact areas, ensuring technical roadmaps were aligned with actual user behavior and usage patterns.",
+        "Infrastructure Revenue Optimization: Engineered full-stack React/Next.js and Python applications to enable real-time analysis of massive geographic datasets, directly increasing revenue generation through improved asset utilization",
+        "High-Scale PostgreSQL Performance: Architected and managed a high-performance PostgreSQL database containing 1B+ rows, implementing advanced optimizationtechniques to ensure sub-second query latency for real-time infrastructure analytics",
+        "GIS Automation: Utilized Python scripting and REST APIs to automate complex fiber routing logic, cutting manual design efforts from weeks down to 5-10 minutes. By replacing labor-intensive workflows with high-speed GIS tools, I empowered the sales team to scale output and drastically reduced the sales cycle duration",
+        "High-Availability Infrastructure & Observability: Engineered and managed scalable AWS infrastructure (EC2, S3, RDS) and CI/CD pipelines to ensure 24/7 availability for client-facing applications",
+        "Performance Optimization: Leveraged Datadog RUM to monitor P75 and P99 latency metrics, utilizing these insights to prioritize infrastructure tuning and code deployments that stabilized high-traffic features",
+        "AI-Driven Cost Optimization (POC): Engineered a full-stack Next.js and AWS Rekognition POC to automate competitor asset discovery on wireless towers, replacing manual field reviews with AI image analysis to drastically reduce operational costs and accelerate market share identification",
       ],
     },
   ];
