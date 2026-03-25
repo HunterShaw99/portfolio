@@ -32,20 +32,6 @@ export default function Home() {
   const workExperience = [
     {
       title: "Software Engineer",
-      company: "Personal Project - Portfolio Website",
-      period: "August 2025 - Present",
-      summary:
-        "Designed and developed a modern, responsive portfolio website showcasing professional experience and technical expertise using Next.js and contemporary web technologies, and the ability to create polished, production-ready applications.",
-      responsibilities: [
-        "Implemented advanced CSS techniques including conic gradients, backdrop filters, and complex animations to enhance the user interface and overall web design",
-        "Created a secure email contact system using Base64 encoding to prevent bot scraping, demonstrating proficiency in security best practices within JavaScript development",
-        "Achieved optimal performance through Next.js optimization features and proper image handling, showcasing expertise in building high-performance web applications with Next.js",
-        "Established a comprehensive Docker workflow supporting both Docker and Podman environments for efficient application packaging and deployment using containerization technologies",
-        "Built responsive web design adapting seamlessly across mobile, tablet, and desktop devices, ensuring accessibility and optimal user experience",
-      ],
-    },
-    {
-      title: "Software Engineer",
       company: "Crown Castle",
       period: "July 2022 - February 2026",
       summary:
@@ -57,6 +43,35 @@ export default function Home() {
         "High-Availability Infrastructure & Observability: Engineered and managed scalable AWS infrastructure (EC2, S3, RDS) and CI/CD pipelines to ensure 24/7 availability for client-facing applications",
         "Performance Optimization: Leveraged Datadog RUM to monitor P75 and P99 latency metrics, utilizing these insights to prioritize infrastructure tuning and code deployments that stabilized high-traffic features",
         "AI-Driven Cost Optimization (POC): Engineered a full-stack Next.js and AWS Rekognition POC to automate competitor asset discovery on wireless towers, replacing manual field reviews with AI image analysis to drastically reduce operational costs and accelerate market share identification",
+      ],
+    },
+    {
+      title: "Software Engineer",
+      company: "Personal Project - I Spy AI",
+      siteLink: "https://ispyai.io/",
+      period: "December 2025 - Present",
+      summary:
+        "Leveraging full-stack development tools to create scalable web app. The web app called I Spy AI uses advanced OpenCV technics to analyze images to determine the authenticity of an image",
+      responsibilities: [
+        "Cloud Infrastructure Optimization: Levereged monitoring tools to understand and best determine the cloud resources needed for I Spy AI",
+        "Advanced Generative AI: Worked heavily to understand under the hood how AI generates images and videos and built a robust openCV algorithm for catching AI content",
+        "CI/CD Flow: Leveraged CI/CD to easily managed rapid deployments and iterate fast",
+        "High-Availability Infrastructure & Observability: Engineered and managed scalable cloud infrastructure to ensure 24/7 availability for client-facing application",
+        "Ownership: Took an idea from a subreddit r/isthisai and worked and iterated it and took the MVP to a full production deployment in three months",
+      ],
+    },
+    {
+      title: "Software Engineer",
+      company: "Personal Project - Portfolio Website",
+      period: "August 2025 - Present",
+      summary:
+        "Designed and developed a modern, responsive portfolio website showcasing professional experience and technical expertise using Next.js and contemporary web technologies, and the ability to create polished, production-ready applications.",
+      responsibilities: [
+        "Implemented advanced CSS techniques including conic gradients, backdrop filters, and complex animations to enhance the user interface and overall web design",
+        "Created a secure email contact system using Base64 encoding to prevent bot scraping, demonstrating proficiency in security best practices within JavaScript development",
+        "Achieved optimal performance through Next.js optimization features and proper image handling, showcasing expertise in building high-performance web applications with Next.js",
+        "Established a comprehensive Docker workflow supporting both Docker and Podman environments for efficient application packaging and deployment using containerization technologies",
+        "Built responsive web design adapting seamlessly across mobile, tablet, and desktop devices, ensuring accessibility and optimal user experience",
       ],
     },
   ];
@@ -212,7 +227,14 @@ export default function Home() {
                   <h3 className="text-3xl font-bold text-white mb-3">
                     {job.title}
                   </h3>
-                  <p className="text-xl text-gray-300 mb-2">{job.company}</p>
+                  <h3 className="text-xl text-gray-300 mb-2">{job.company} </h3>
+                  {job.siteLink && (
+                    <h5>
+                      <a href="https://ispyai.io/" className="text-emerald-700">
+                        ispyai.io
+                      </a>
+                    </h5>
+                  )}
                   <p className="text-gray-500 font-medium mb-4">{job.period}</p>
                   {job.summary && (
                     <span className="text-lg text-gray-400 italic leading-relaxed">
@@ -220,14 +242,14 @@ export default function Home() {
                     </span>
                   )}
                 </div>
-                <div className="space-y-5">
+                <div className="space-y-5 text-wrap: balance">
                   {job.responsibilities.map((responsibility, idx) => (
                     <div
                       key={idx}
                       className="flex items-start text-gray-300 leading-relaxed"
                     >
                       <span className="w-1.5 h-1.5 bg-gray-500 rounded-full mr-4 mt-2 shrink-0"></span>
-                      <span>{responsibility}</span>
+                      <span className="text-wrap:wrap">{responsibility}</span>
                     </div>
                   ))}
                 </div>
