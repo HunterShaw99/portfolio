@@ -21,12 +21,15 @@ export default function Home() {
     "PL/SQL",
     "Linux/Unix",
     "Containerization",
-    "AWS Databricks",
+    "Databricks",
     "Digital Ocean",
     "Next.js",
     "Tailwinds CSS",
     "Image Analysis",
     "AWS Rekognition",
+    "Authentication",
+    "llama.cpp",
+    "AI finetuning",
   ];
 
   const workExperience = [
@@ -51,7 +54,7 @@ export default function Home() {
       siteLink: "https://ispyai.io/",
       period: "December 2025 - Present",
       summary:
-        "Leveraging full-stack development tools to create scalable web app. The web app called I Spy AI uses advanced OpenCV technics to analyze images to determine the authenticity of an image",
+        "Leveraging full-stack development tools to create scalable web app. The web app called I Spy AI uses advanced OpenCV techniques to analyze images to determine the authenticity of an image",
       responsibilities: [
         "Cloud Infrastructure Optimization: Levereged monitoring tools to understand and best determine the cloud resources needed for I Spy AI",
         "Advanced Generative AI: Worked heavily to understand under the hood how AI generates images and videos and built a robust openCV algorithm for catching AI content",
