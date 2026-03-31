@@ -40,12 +40,12 @@ export default function Home() {
       summary:
         "Leveraging full-stack development tools to create scalable web applications and GIS solutions that drive business value and operational efficiency.",
       responsibilities: [
-        "Infrastructure Revenue Optimization: Engineered full-stack React/Next.js and Python applications to enable real-time analysis of massive geographic datasets, directly increasing revenue generation through improved asset utilization",
-        "High-Scale PostgreSQL Performance: Architected and managed a high-performance PostgreSQL database containing 1B+ rows, implementing advanced optimizationtechniques to ensure sub-second query latency for real-time infrastructure analytics",
-        "GIS Automation: Utilized Python scripting and REST APIs to automate complex fiber routing logic, cutting manual design efforts from weeks down to 5-10 minutes. By replacing labor-intensive workflows with high-speed GIS tools, I empowered the sales team to scale output and drastically reduced the sales cycle duration",
-        "High-Availability Infrastructure & Observability: Engineered and managed scalable AWS infrastructure (EC2, S3, RDS) and CI/CD pipelines to ensure 24/7 availability for client-facing applications",
-        "Performance Optimization: Leveraged Datadog RUM to monitor P75 and P99 latency metrics, utilizing these insights to prioritize infrastructure tuning and code deployments that stabilized high-traffic features",
-        "AI-Driven Cost Optimization (POC): Engineered a full-stack Next.js and AWS Rekognition POC to automate competitor asset discovery on wireless towers, replacing manual field reviews with AI image analysis to drastically reduce operational costs and accelerate market share identification",
+        "Engineered a geospatial demand analytics platform that identified 500+ new tower build locations and drove 200+ submitted orders. Architected the backend to support real-time spatial analysis of 1B+ rows in an AWS-hosted PostgreSQL database , utilizing Databricks for multi-TB ETL and S3-cached vector tiles to maintain sub-second query latency for sales engineers",
+        "Eliminated manual field review costs by developing an AI-driven competitor discovery POC, using AWS Rekognition to automate market share identification on wireless towers",
+        "Accelerated the sales cycle by 99% through the automation of complex fiber routing logic using Python and REST APIs. Reduced manual engineering efforts from weeks to 5-10 minutes, enabling the sales team to scale output and capture market opportunities faster",
+        "Updated regulatory application that identified environmental hazards, utilizing Asyncpg and Asyncio in a FastAPI backend to process multiple requests, taking runs from 1-2 minutes to 3-5 seconds wait",
+        "Engineered and managed scalable AWS infrastructure (EC2, S3, RDS) and CI/CD pipelines to ensure 24/7 availability for client-facing applications",
+        "Improved feature stability for high-traffic applications by identifying and resolving P99, P75 latency bottlenecks using Datadog RUM",
       ],
     },
     {
@@ -56,11 +56,12 @@ export default function Home() {
       summary:
         "Leveraging full-stack development tools to create scalable web app. The web app called I Spy AI uses advanced OpenCV techniques to analyze images to determine the authenticity of an image",
       responsibilities: [
-        "Cloud Infrastructure Optimization: Levereged monitoring tools to understand and best determine the cloud resources needed for I Spy AI",
-        "Advanced Generative AI: Worked heavily to understand under the hood how AI generates images and videos and built a robust openCV algorithm for catching AI content",
-        "CI/CD Flow: Leveraged CI/CD to easily managed rapid deployments and iterate fast",
-        "High-Availability Infrastructure & Observability: Engineered and managed scalable cloud infrastructure to ensure 24/7 availability for client-facing application",
-        "Ownership: Took an idea from a subreddit r/isthisai and worked and iterated it and took the MVP to a full production deployment in three months",
+        "Optimized cloud resource allocation through proactive monitoring, ensuring 24/7 application availability while minimizing operational overhead for high-traffic image processing",
+        "Engineered a robust OpenCV-based analysis engine capable of identifying synthetic image patterns, utilizing deep research into generative AI architectures to improve detection authenticity",
+        "Accelerated feature iteration through automated CI/CD pipelines and secured user data by implementing a multi-tier micro-service authentication architecture",
+        "Executed a rapid 3-month product lifecycle from initial concept to full production deployment, delivering a high-performance MVP for AI-generated content detection",
+        "Implemented secure account authentication and micro-service route authentication",
+        "Increased visitor retention through data-driven UI iterations, utilizing PostHog analytics to identify and resolve user friction points",
       ],
     },
     {
@@ -70,11 +71,9 @@ export default function Home() {
       summary:
         "Designed and developed a modern, responsive portfolio website showcasing professional experience and technical expertise using Next.js and contemporary web technologies, and the ability to create polished, production-ready applications.",
       responsibilities: [
-        "Implemented advanced CSS techniques including conic gradients, backdrop filters, and complex animations to enhance the user interface and overall web design",
-        "Created a secure email contact system using Base64 encoding to prevent bot scraping, demonstrating proficiency in security best practices within JavaScript development",
-        "Achieved optimal performance through Next.js optimization features and proper image handling, showcasing expertise in building high-performance web applications with Next.js",
-        "Established a comprehensive Docker workflow supporting both Docker and Podman environments for efficient application packaging and deployment using containerization technologies",
-        "Built responsive web design adapting seamlessly across mobile, tablet, and desktop devices, ensuring accessibility and optimal user experience",
+        "Developed a professional platform using Next.js and Docker, implementing advanced CSS and animations to demonstrate technical depth and modern design standards",
+        "Hardened site security by architecting a Base64-encoded contact system to mitigate automated bot scraping and protect user data integrity",
+        "Leveraged Next.js performance features to optimize responsiveness and load times, ensuring a seamless experience across mobile and desktop devices",
       ],
     },
   ];
